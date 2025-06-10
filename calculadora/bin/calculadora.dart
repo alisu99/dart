@@ -57,25 +57,74 @@ import 'dart:io';
 // Altura;
 // Participo da comunidade?
 
-void main() {
-  print('Nome:');
-  String nome = stdin.readLineSync()!;
+// void main() {
+//   print('Nome:');
+//   String nome = stdin.readLineSync()!;
 
-  print('CPF');
-  String cpf = stdin.readLineSync()!;
+//   print('CPF');
+//   String cpf = stdin.readLineSync()!;
 
-  print('Idade');
-  int idade = int.parse(stdin.readLineSync()!);
+//   print('Idade');
+//   int idade = int.parse(stdin.readLineSync()!);
 
-  print('Altura');
-  double altura = double.parse(stdin.readLineSync()!);
+//   print('Altura');
+//   double altura = double.parse(stdin.readLineSync()!);
 
-  print('Participa da comunidade?');
-  bool participa_comunidade = bool.parse(stdin.readLineSync()!);
+//   print('Participa da comunidade?');
+//   bool participa_comunidade = bool.parse(stdin.readLineSync()!);
 
-  print('Nome: $nome');
-  print('CPF: $cpf');
-  print('Idade: $idade');
-  print('Altura: $altura');
-  print('Participante da comunidade: $participa_comunidade');
-}
+//   print('Nome: $nome');
+//   print('CPF: $cpf');
+//   print('Idade: $idade');
+//   print('Altura: $altura');
+//   print('Participante da comunidade: $participa_comunidade');
+// }
+
+// ------------------------------------------------------
+
+// void main() {
+//   print('Digite sua idade');
+//   int idade = int.parse(stdin.readLineSync()!);
+
+//   if (idade < 18) {
+//     print('Você estáproibido de dirigir veículos automotores! ');
+//   }
+
+//   else {
+//     print('Você está apto a dirigir.');
+//   }
+// }
+
+// ------------------------------------------------------
+
+// void main() {
+//   print('Digite um número referente a um mês');
+//   String mes = stdin.readLineSync()!;
+
+//   switch (mes) {
+//     case "1":
+//       print('O mês $mes é Janeiro.');
+//     case "2":
+//       print('O mês $mes é Fevereiro.');
+//     case "3":
+//       print('O mês $mes é Março.');
+//     case "4":
+//       print('O mês $mes é Abril.');
+//     case "5":
+//       print('O mês $mes é Maio.');
+//     case "6":
+//       print('O mês $mes é Junho.');
+//     case "7":
+//       print('O mês $mes é Julho.');
+//     case "8":
+//       print('O mês $mes é Agosto.');
+//     case "9":
+//       print('O mês $mes é Setembro.');
+//     case "10":
+//       print('O mês $mes é Outubro.');
+//     case "11":
+//       print('O mês $mes é Novembro.');
+//     case "12":
+//       print('O mês $mes é Dezembro.');
+//   }
+// }
