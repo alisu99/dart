@@ -32,16 +32,16 @@ import 'dart:io';
 //   }
 // }
 
-void main() {
-  List<String> categorias = ['livros', 'roupas', 'videogames'];
+// void main() {
+//   List<String> categorias = ['livros', 'roupas', 'videogames'];
 
-    print('Adicionar categoria');
-    String categoria = stdin.readLineSync()!;
-    if (categorias.contains(categoria)) {
-      print('A categoria "$categoria" já existe na lista de categorias.');
-    } else {
-      categorias.add(categoria);
-      print('Categoria "$categoria" adicionada com sucesso!');
-    }
+//     print('Adicionar categoria');
+//     String categoria = stdin.readLineSync()!;
+//     if (categorias.contains(categoria)) {
+//       print('A categoria "$categoria" já existe na lista de categorias.');
+//     } else {
+//       categorias.add(categoria);
+//       print('Categoria "$categoria" adicionada com sucesso!');
+//     }
   
-}
+// }
