@@ -2,9 +2,7 @@ import 'dart:io';
 
 void main() {
   List<String> notas = [];
-  getComando();
-  addNota(notas);
-  listarNotas(notas);
+  menu(notas);
 }
 
 String getComando() {
@@ -40,3 +38,35 @@ void listarNotas(List<String> notas) {
     print(notas[i]);
   }
 }
+
+void menu(List<String> notas) {
+  print("");
+  print("");
+  String comando = getComando();
+
+  switch (comando) {
+    case "1":
+    addNota(notas);
+    menu(notas);
+    case "2":
+    listarNotas(notas);
+
+    case "3":
+    print('Até breve!');
+  }
+}
+
+  
+// void main() {
+//   for (var i = 1; i < 6; i++) {
+//     print(i);
+//   }
+// }
+
+// void main() {
+//   List<String> nomes = ["Ana", "João", "Alisson", "Patrícia", "Elvira"];
+  
+//   for (var i in nomes) {
+//     print('Nome: $i');
+//   }
+// }
