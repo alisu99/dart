@@ -1,4 +1,45 @@
 void main() {
+  // Map<String, double> precosProdutos = {
+  //   "Camiseta": 30.0,
+
+  //   "Calça": 50.0,
+
+  //   "Boné": 15.0,
+
+  //   "Tênis": 120.0,
+  // };
+
+  // somaProdutos(Map<String, double> produtos) {
+  //   for (var i in produtos.values) {
+  //     var valorTotal = i + i;
+  //     print(valorTotal);
+  //   }
+  // }
+
+  // somaProdutos(precosProdutos);
+
+  // Lista de mapas, onde cada mapa contém o nome e a pontuação de um cliente.
+
+  // List<Map<String, dynamic>> clientes = [
+  //   {"nome": "João", "pontuacao": 6.5},
+
+  //   {"nome": "Maria", "pontuacao": 8.7},
+
+  //   {"nome": "Pedro", "pontuacao": 9.2},
+
+  //   {"nome": "Ana", "pontuacao": 5.4},
+  // ];
+
+  // void exibirClientesFieis(List<Map<String, dynamic>> clientes) {
+  //   for (Map<String, dynamic> cliente in clientes) {
+  //     if (cliente["pontuacao"] > 7) {
+  //       print(cliente["nome"]);
+  //     }
+  //   }
+  // }
+  // exibirClientesFieis(clientes);
+}
+
   // Set<int> codigosDisponiveis = {1, 2, 3, 4, 5};
   // print(verificarDisponibilidade(codigosDisponiveis, 9));
   // Set<int> produtosSemana = {1, 2, 3, 4};
@@ -14,7 +55,6 @@ void main() {
   // }
 
   // verificarNumero(produtosSemana, produtosMes);
-}
 
 // void listarTarefas() {
 //   List<String> tarefas = ["Varrer a casa", "Encher as garrafas", "Limpar os vidros"];
