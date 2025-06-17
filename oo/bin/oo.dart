@@ -1,5 +1,14 @@
-import 'package:oo/oo.dart' as oo;
+import '../lib/conta.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${oo.calculate()}!');
+Conta contamateus = Conta("Mateus", 2000);
+Conta contaroberta = Conta("Roberta", 5000);
+
+void main() {
+  contamateus.receber(200);
+  contamateus.enviar(350);
+  List<Conta> contas = [contamateus, contaroberta];
+
+  for (var conta in contas) {
+    print("${conta.titular} - ${conta._saldo}");
+  }
 }
