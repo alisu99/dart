@@ -21,37 +21,46 @@ class Conta {
   }
 }
 
-class Cliente {
-  String nome;
-  List<int> _quartos_reservados = <int>[];
-
-  Cliente(this.nome, this._quartos_reservados);
-
-  void reservarQuarto(int quarto) {
-    if (_quartos_reservados.contains(quarto)) {
-      print("O quarto $quarto já está reservado para ${nome.toUpperCase()}");
-    } else {
-      _quartos_reservados.add(quarto);
-      print('Quarto $quarto reservado para ${nome.toUpperCase()} com sucesso!');
-      quartosReservados();
-    }
-  }
-
-  void quartosReservados() {
-    print('Os quartos reservados para ${nome.toUpperCase()} são: ${_quartos_reservados.join(', ')}');
-    print('-----------------------------------------------------------------------');
-  }
-
-  void cancelarReserva(int quarto) {
-    if (!_quartos_reservados.contains(quarto)) {
-      print('O quarto $quarto NÃO está reservado para $nome');
-    } else {
-        _quartos_reservados.remove(quarto);
-        print('Reserva do quarto $quarto para ${nome.toUpperCase()} cancelada com sucesso!');
-        quartosReservados();
-    }
-  }
+class ContaCorrente extends Conta {
+  ContaCorrente(super.titular, super._saldo);
 }
+
+class ContaPoupanca extends Conta {
+  ContaPoupanca(super.titular, super._saldo);
+}
+
+
+// class Cliente {
+//   String nome;
+//   List<int> _quartos_reservados = <int>[];
+
+//   Cliente(this.nome, this._quartos_reservados);
+
+//   void reservarQuarto(int quarto) {
+//     if (_quartos_reservados.contains(quarto)) {
+//       print("O quarto $quarto já está reservado para ${nome.toUpperCase()}");
+//     } else {
+//       _quartos_reservados.add(quarto);
+//       print('Quarto $quarto reservado para ${nome.toUpperCase()} com sucesso!');
+//       quartosReservados();
+//     }
+//   }
+
+//   void quartosReservados() {
+//     print('Os quartos reservados para ${nome.toUpperCase()} são: ${_quartos_reservados.join(', ')}');
+//     print('-----------------------------------------------------------------------');
+//   }
+
+//   void cancelarReserva(int quarto) {
+//     if (!_quartos_reservados.contains(quarto)) {
+//       print('O quarto $quarto NÃO está reservado para $nome');
+//     } else {
+//         _quartos_reservados.remove(quarto);
+//         print('Reserva do quarto $quarto para ${nome.toUpperCase()} cancelada com sucesso!');
+//         quartosReservados();
+//     }
+//   }
+// }
 
 // class Receita {
 //   String nome;
