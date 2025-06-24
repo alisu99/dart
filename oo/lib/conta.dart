@@ -29,6 +29,17 @@ class ContaPoupanca extends Conta {
   ContaPoupanca(super.titular, super._saldo);
 }
 
+class ContaSalario extends Conta {
+  ContaSalario(super.titular, super._saldo, this.cnpj_empresa, this.nome_empresa);
+
+  String cnpj_empresa;
+  String nome_empresa;
+
+  void DepositarSalario(double valor) {
+    receber(valor);
+    print("O salário da empresa $nome_empresa, de CNPJ $cnpj_empresa no valor de R\$$valor foi depositado!");
+  }
+}
 
 // class Cliente {
 //   String nome;
