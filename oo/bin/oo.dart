@@ -1,7 +1,5 @@
 import '../lib/conta.dart';
 
-// Conta contamateus = Conta("Mateus", 2000);
-// Conta contaroberta = Conta("Roberta", 5000);
 // ContaCorrente contathayna = ContaCorrente("Thayna", 5000);
 // ContaPoupanca contapedro = ContaPoupanca("Pedro", 5000);
 
