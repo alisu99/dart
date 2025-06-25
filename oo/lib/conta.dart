@@ -4,13 +4,13 @@ abstract class Conta {
 
   Conta(this.titular, this._saldo);
 
-  receber(valor) {
+  void receber(double valor) {
     _saldo += valor;
     print("PIX recebido no valor de $valor.");
     printSaldo();
   }
 
-  enviar(valor) {
+  void enviar(double valor) {
     _saldo -= valor;
     print("PIX enviado no valor de $valor para ${titular.toUpperCase()}.");
     printSaldo();
@@ -30,14 +30,65 @@ class ContaPoupanca extends Conta {
 }
 
 class ContaSalario extends Conta {
-  ContaSalario(super.titular, super._saldo, this.cnpj_empresa, this.nome_empresa);
+  ContaSalario(
+    super.titular,
+    super._saldo,
+    this.cnpj_empresa,
+    this.nome_empresa,
+  );
 
   String cnpj_empresa;
   String nome_empresa;
 
   void DepositarSalario(double valor) {
     receber(valor);
-    print("O salário da empresa $nome_empresa, de CNPJ $cnpj_empresa no valor de R\$$valor foi depositado!");
+    print(
+      "O salário da empresa $nome_empresa, de CNPJ $cnpj_empresa no valor de R\$$valor foi depositado!",
+    );
+  }
+}
+
+mixin Imposto {
+  double taxa = 0.3;
+
+  double valorTaxado(double valor) {
+    return valor * taxa;
+  }
+}
+
+class ContaEmpresa extends Conta with Imposto {
+  ContaEmpresa(super.titular, super._saldo);
+
+  @override
+  void enviar(double valor) {
+    if (_saldo >= valor + valorTaxado(valor)) {
+      _saldo -= valor + valorTaxado(valor);
+      printSaldo();
+    }
+  }
+
+  @override
+  void receber(double valor) {
+    _saldo += valor - valorTaxado(valor);
+    printSaldo();
+  }
+}
+
+class ContaInvestimento extends Conta with Imposto {
+  ContaInvestimento(super.titular, super._saldo);
+
+  @override
+  void enviar(double valor) {
+    if (_saldo >= valor + valorTaxado(valor)) {
+      _saldo -= valor + valorTaxado(valor);
+      printSaldo();
+    }
+  }
+
+  @override
+  void receber(double valor) {
+    _saldo -= valor + valorTaxado(valor);
+    printSaldo();
   }
 }
 
@@ -93,7 +144,6 @@ class ContaSalario extends Conta {
 // }
 
 // =============================================================
-
 
 // class Estoque {
 //   String item;
