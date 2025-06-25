@@ -76,7 +76,7 @@ import '../lib/conta.dart';
 // }
 
 
-// class Animal {
+// abstract class Animal {
 //   String especie;
 
 //   Animal(this.especie);
@@ -123,11 +123,45 @@ import '../lib/conta.dart';
 //   gatoPipoca.aranharMoveis();
 // }
 
-// ContaSalario ContaSalarioCatarina = ContaSalario("Catarina", 2500, "07007635385555", "AGAS");
+// // ContaSalario ContaSalarioCatarina = ContaSalario("Catarina", 2500, "07007635385555", "AGAS");
 
-// void main() {
-//   // ContaSalarioCatarina.receber(500);
-//   // ContaSalarioCatarina.enviar(900);
+// // void main() {
+// //   // ContaSalarioCatarina.receber(500);
+// //   // ContaSalarioCatarina.enviar(900);
 
-//   ContaSalarioCatarina.DepositarSalario(2500);
-// }
+// //   ContaSalarioCatarina.DepositarSalario(2500);
+// // }
+
+abstract class Funcionario {
+  String nomeFuncionario;
+  double salarioBase = 3000;
+
+  Funcionario(this.nomeFuncionario, this.salarioBase);
+}
+
+class Analista extends Funcionario {
+  Analista(super.nome, super.salarioBase);
+  void calcularSalario() {
+    print('Salário do(a) Analista $nomeFuncionario: R\$ ${salarioBase += salarioBase * 1.2}');
+  }
+}
+
+class Gerente extends Funcionario {
+  Gerente(super.nome, super.salarioBase);
+  void calcularSalario() {
+    print('Salário do(a) Analista $nomeFuncionario: R\$ ${salarioBase += salarioBase * 1.5}');
+  }
+}
+class Diretor extends Funcionario {
+  Diretor(super.nome, super.salarioBase);
+
+  void calcularSalario() {
+    print('Salário do(a) Analista $nomeFuncionario: R\$ ${salarioBase += salarioBase * 2}');
+  }
+}
+
+Analista analistaJoao = Analista("joão", 3000);
+
+void main() {
+  analistaJoao.calcularSalario();
+}
